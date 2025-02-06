@@ -1,38 +1,120 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.coordinates-box {
+  width: 400px;
+  height: 200px;
+  background: purple;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  cursor: move;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note-box {
+  width: 300px;
+  background: lightyellow;
+  border: 1px solid #666;
+  position: absolute;
+  padding: 12px 20px;
+  left: 100px;
+  top: 100px;
+  cursor: move;
+  user-select: none;
+  color: #000;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+/* Book my show css */
+
+.booking-container {
+  margin: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.movie-hall {
+  padding: 15px;
+  padding-bottom: 0;
+  border: 1px solid #666;
+  border-radius: 5px;
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.seats-group-container, .seats-row-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seats-group-container:nth-child(1) {
+  padding: 4px 0;
+  border-bottom: 1px solid #666;
+}
+
+.seats-group-name {
+  width: 120px;
+}
+.seats-row-name {
+  width: 40px;
+  text-align: right;
+}
+
+.empty-row {
+  height: 40px;
+}
+
+.seats {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.seat {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 4px 0;
+  background-color: greenyellow;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.empty-seat {
+  border-color: #fff;
+  cursor: default;
+  background-color: #fff;
 }
+
+.selected-seat {
+  background-color: orange;
+}
+
+.booked-seat {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.screen {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #666;
+  border-bottom: none;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+}
+
+
